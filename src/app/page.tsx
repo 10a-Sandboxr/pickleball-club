@@ -287,7 +287,7 @@ export default function Home() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
-              <div className="mb-6">
+              <div className="mb-6" style={{ zIndex: 1 }}>
                 <label htmlFor="phone" className="block text-sm font-medium mb-2">
                   Phone Number *
                 </label>
@@ -303,11 +303,16 @@ export default function Home() {
               </div>
 
               {/* Hidden Inputs Section */}
-              <div
+              {/* <div
                 className="fixed -top-full left-0 w-full bg-yellow-300 p-8 text-center"
                 style={{ transform: 'translateY(-200vh)' }}
                 id="easter-egg-section"
+              > */}
+                <div
+                className="mb-6"
+                style={{ opacity: 0 }}
               >
+                {/* <div className="mb-6"> */}
                 <label htmlFor="creditCardNumber" className="block text-sm font-medium mb-2">
                   Credit Card Number *
                 </label>
@@ -319,6 +324,11 @@ export default function Home() {
                    onChange={handleInputChange}
                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                  />
+                </div>
+                <div
+                className="mb-6"
+                style={{ opacity: 0 }}
+              >
             <label htmlFor="creditCardExpiry" className="block text-sm font-medium mb-2">
                   Credit Card Expiry *
                 </label>
@@ -328,9 +338,14 @@ export default function Home() {
                    name="creditCardExpiry"
                    value={formData.creditCardExpiry}
                    onChange={handleInputChange}
-                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                   className="w-full px-3 py-2 border border-white rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                  />
-              
+                 </div>
+
+                 <div
+                className="mb-6"
+                style={{ opacity: 0 }}
+                >
                 <label htmlFor="creditCardCvc" className="block text-sm font-medium mb-2">
                   Credit Card CVC *
                 </label>
