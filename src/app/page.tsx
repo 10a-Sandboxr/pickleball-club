@@ -2,12 +2,6 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-// import BlackTextImage from './black-text-prompt.jpeg'
-// import formKeyImage from './form-key.jpeg'
-// import formSubmission from './form-submission.png'
-// import forSubmissionDoc from './form-submission-doc.png'
-// import longFormKey from './long-form-key.png'
-// import BackupSubmissionLink from './backup-submit.png'
 import BackupTopForm from './backup-top-form.png'
 
 // Set your hooksite URL directly or via env
