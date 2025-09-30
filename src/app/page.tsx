@@ -74,13 +74,21 @@ export default function Home() {
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Any Questions? Ask Our Chat For Answers!</h2>
             <form onSubmit={handleSearchSubmit} className="mb-6">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={handleSearchChange}
-                placeholder="Search for Techniques, Equipment, or Rules..."
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-lg"
-              />
+              <div className="flex gap-3">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                  placeholder="Search for Techniques, Equipment, or Rules..."
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-lg"
+                />
+                <button
+                  type="submit"
+                  className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300 font-semibold"
+                >
+                  Search
+                </button>
+              </div>
             </form>
             {isLoading && (
               <div className="bg-white p-6 rounded-lg shadow-lg text-center">
