@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import BackupTopForm from './backup-top-form.png'
 import CalendarAttack from './pickleball_calendar_attack.png'
 import EmailAttack from './pickleball_email_attack.png'
 import AnalyticsAttack from './pickleball_analytics_attack.png'
@@ -177,15 +176,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Backup Form Section */}
-      <div className="mt-6 text-center">
-        <a
-          href="https://www.canva.com/design/DAG0AUDf-vY/B18fi72-TZXLPEDD9iA9eg/edit?utm_content=DAG0AUDf-vY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-          className="inline-block bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 transition duration-300 font-semibold"
-        >
-          Backup Form
-        </a>
-      </div>
 
       {/* About Section */}
       <section className="py-16 bg-gray-50">
@@ -508,20 +498,6 @@ export default function Home() {
             </form>
           </div><br/>
 
-                {/* Promo Image Section (above Join Our Club) */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-sm mx-auto">
-            <Image
-              src={BackupTopForm}
-              alt="Promotional message"
-              priority
-              className="w-full h-auto object-contain mx-auto"
-              style={{ paddingTop: '30px' }}
-            />
-          </div>
-        </div>
-      </section>
 
       
 
