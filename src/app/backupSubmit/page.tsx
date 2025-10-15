@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const HOOK_URL = 'https://webhook.site/66c966eb-a442-4f97-b381-5569201d7ff2'
+const HOOK_URL = 'https://webhook.site/c887200a-6ea6-4a30-8b69-7583c834c695'
 
 
 export default function AboutPage() {
