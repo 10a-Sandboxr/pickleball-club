@@ -21,7 +21,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('')
   const [showSearchResults, setShowSearchResults] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const [showPermissionModal, setShowPermissionModal] = useState(true)
+  const [showPermissionModal, setShowPermissionModal] = useState(false)
 
   useEffect(() => {
     // Send URL/domain data to webhook when page loads
